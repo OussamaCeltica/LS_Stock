@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_simple"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".Preparations.NotificationAlert">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:gravity="center"
+        android:fontFamily="@font/cairo_semibold"
+        android:lineSpacingExtra="-10dp"
+        android:textColor="@color/Black"
+        android:textSize="17sp"
+        android:text="Vous avez une préparation a faire .."/>
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:background="@drawable/ls_stock_icon"/>
+</LinearLayout>

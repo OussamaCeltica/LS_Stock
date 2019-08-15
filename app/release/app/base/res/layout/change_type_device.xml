@@ -1,0 +1,48 @@
+
+Ò
+9
+android*http://schemas.android.com/apk/res/androidLinearLayout"a
+*http://schemas.android.com/apk/res/androidlayout_heightmatch_parent"(õ„2:0ÿÿÿÿÿÿÿÿÿ"`
+*http://schemas.android.com/apk/res/androidlayout_widthmatch_parent"(ô„2:0ÿÿÿÿÿÿÿÿÿ"R
+*http://schemas.android.com/apk/res/androidorientationvertical"(Ä„2:0"K
+*http://schemas.android.com/apk/res/androidpadding20dp"(Õ„2:h(*
+
+    *‚
+ùLinearLayout"a
+*http://schemas.android.com/apk/res/androidlayout_heightwrap_content"(õ„2:0şÿÿÿÿÿÿÿÿ"`
+*http://schemas.android.com/apk/res/androidlayout_widthmatch_parent"(ô„2:0ÿÿÿÿÿÿÿÿÿ*	
+        	-*
+
+ø	
+RadioGroup"Y
+*http://schemas.android.com/apk/res/androidid
+@+id/check"
+(Ğ„2
+¾€¤øid/check"a
+*http://schemas.android.com/apk/res/androidlayout_heightwrap_content"
+(õ„2:0şÿÿÿÿÿÿÿÿ"`
+*http://schemas.android.com/apk/res/androidlayout_widthmatch_parent"
+(ô„2:0ÿÿÿÿÿÿÿÿÿ*
+            1*Ç
+¾RadioButton"a
+*http://schemas.android.com/apk/res/androidid@+id/type_sans"(Ğ„2
+À‚¤øid/type_sans"a
+*http://schemas.android.com/apk/res/androidlayout_heightwrap_content"(õ„2:0şÿÿÿÿÿÿÿÿ"`
+*http://schemas.android.com/apk/res/androidlayout_widthmatch_parent"(ô„2:0ÿÿÿÿÿÿÿÿÿ"†
+*http://schemas.android.com/apk/res/androidtext@string/config_type_sansscanner"(Ï‚„2(
+&­€¸østring/config_type_sansscanner*
+            @*¾
+µRadioButton"a
+*http://schemas.android.com/apk/res/androidid@+id/type_avec"(Ğ„2
+¿‚¤øid/type_avec"a
+*http://schemas.android.com/apk/res/androidlayout_heightwrap_content"(õ„2:0şÿÿÿÿÿÿÿÿ"`
+*http://schemas.android.com/apk/res/androidlayout_widthmatch_parent"(ô„2:0ÿÿÿÿÿÿÿÿÿ"~
+*http://schemas.android.com/apk/res/androidtext@string/config_type_scanner"(Ï‚„2$
+"®€¸østring/config_type_scanner*	
+        <
+*
+    *
+
+
+
+

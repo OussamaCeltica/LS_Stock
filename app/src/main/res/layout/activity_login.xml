@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_simple"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context="com.leadersoft.celtica.lsstock.Login">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/cairo_semibold"
+        android:text="@string/login_cnct"
+        android:textColor="@color/AppColor"
+        android:textSize="40sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:fontFamily="@font/cairo_semibold"
+        android:textColor="@color/AppColor"
+        android:textSize="17sp"
+        android:text="@string/login_mode_titr"
+        />
+    <TextView
+        android:id="@+id/login_mode"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/cairo_semibold"
+        android:background="@drawable/bg_butt"
+        android:gravity="center"
+        android:textColorHint="@color/White"
+        android:hint="@string/login_mode"
+        android:textColor="@color/White"
+        android:textSize="17sp" />
+
+    <TextView
+        android:id="@+id/login_emp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="15dp"
+        android:visibility="gone"
+        android:fontFamily="@font/cairo_semibold"
+        android:background="@drawable/bg_butt"
+        android:gravity="center"
+        android:textColorHint="@color/White"
+        android:hint="@string/login_emp"
+        android:textColor="@color/White"
+        android:textSize="17sp" />
+
+    <TextView
+        android:id="@+id/login_valider"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/cairo_semibold"
+        android:background="@drawable/bg_butt"
+        android:gravity="center"
+        android:visibility="gone"
+        android:textColorHint="@color/White"
+        android:hint="@string/login_valider"
+        android:textColor="@color/White"
+        android:textSize="17sp" />
+
+</LinearLayout>

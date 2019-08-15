@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg_simple"
+    tools:context="com.leadersoft.celtica.lsstock.Inventaire.FaireInventaire">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/AppColor">
+        <ImageView
+            android:id="@+id/add_pr_toPanier"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:padding="3dp"
+            android:layout_gravity="right"
+            android:src="@drawable/add_pr_white"/>
+
+    </FrameLayout>
+
+    <CheckBox
+        android:id="@+id/faire_inventaire_isPackaging"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/faire_transf_qt_packagingAutoriser"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/White">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="10dp"
+            android:layout_weight="1"
+            android:gravity="left|center"
+            android:fontFamily="@font/cairo_semibold"
+            android:textSize="16sp"
+            android:textColor="@color/AppColor"
+            android:text="@string/panier_pr_titre"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="10dp"
+            android:layout_weight="1"
+            android:gravity="left|center"
+            android:fontFamily="@font/cairo_semibold"
+            android:textSize="16sp"
+            android:textColor="@color/AppColor"
+            android:text="@string/panier_qt_titre"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="10dp"
+            android:layout_weight="1"
+            android:gravity="left|center"
+            android:fontFamily="@font/cairo_semibold"
+            android:textSize="16sp"
+            android:textColor="@color/AppColor"
+            android:text="@string/faire_transf_qt_type"/>
+
+    </LinearLayout>
+
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/div_affich_panier"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_marginTop="5dp">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <TextView
+        android:id="@+id/faire_inventaire_valider"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/bg_butt"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:fontFamily="@font/cairo_semibold"
+        android:textColor="@color/White"
+        android:textSize="17sp"
+        android:text="@string/login_valider"/>
+
+</LinearLayout>

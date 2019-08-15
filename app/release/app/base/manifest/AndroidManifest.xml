@@ -1,0 +1,120 @@
+
+ª/
+9
+android*http://schemas.android.com/apk/res/androidmanifest")packagecom.leadersoft.celtica.lsstock"K
+*http://schemas.android.com/apk/res/androidversionCode6"(õÑÑ2:0"E
+*http://schemas.android.com/apk/res/androidversionName1.4.1(úÑÑ*
+
+    !*∂
+≠uses-sdk"N
+*http://schemas.android.com/apk/res/androidminSdkVersion14"(åÑÑ2:0"Q
+*http://schemas.android.com/apk/res/androidtargetSdkVersion26"(ÑÑ2:0*
+
+    	(*m
+euses-permission"R
+*http://schemas.android.com/apk/res/androidnameandroid.permission.CAMERA(ÉÄÑ*
+    @*o
+guses-permission"T
+*http://schemas.android.com/apk/res/androidnameandroid.permission.INTERNET(ÉÄÑ*
+
+    B*–)
+«)application"N
+*http://schemas.android.com/apk/res/androidallowBackuptrue"(ÄÖÑ2:@"v
+*http://schemas.android.com/apk/res/androidicon@drawable/ls_stock_icon"(ÇÄÑ2 
+ÙÄú¯drawable/ls_stock_icon"i
+*http://schemas.android.com/apk/res/androidlabel@string/app_name"(ÅÄÑ2
+¢Ä∏¯string/app_name"{
+*http://schemas.android.com/apk/res/android	roundIcon@drawable/ls_stock_icon"(¨äÑ2 
+ÙÄú¯drawable/ls_stock_icon"N
+*http://schemas.android.com/apk/res/androidsupportsRtltrue"(ØáÑ2:@"g
+*http://schemas.android.com/apk/res/androidtheme@style/AppTheme"(ÄÄÑ2
+ÜÄº¯style/AppTheme*	
+        )*µ
+¨activity"]
+*http://schemas.android.com/apk/res/androidname$com.leadersoft.celtica.lsstock.Login(ÉÄÑ"X
+*http://schemas.android.com/apk/res/androidscreenOrientationportrait"(ûÄÑ2:0*
+            2*º
+≥intent-filter*
+                *e
+]action"S
+*http://schemas.android.com/apk/res/androidnameandroid.intent.action.MAIN(ÉÄÑ*
+
+                D*m
+ecategory"Y
+*http://schemas.android.com/apk/res/androidname android.intent.category.LAUNCHER(ÉÄÑ*
+            L*	
+        *	
+        *Œ
+≈activity"_
+*http://schemas.android.com/apk/res/androidname&com.leadersoft.celtica.lsstock.Accueil(ÉÄÑ"X
+*http://schemas.android.com/apk/res/androidscreenOrientationportrait"(ûÄÑ2:0*	
+         3*’
+Ãactivity"f
+*http://schemas.android.com/apk/res/androidname-com.leadersoft.celtica.lsstock.CodeBarScanner(ÉÄÑ"X
+*http://schemas.android.com/apk/res/androidscreenOrientationportrait"!(ûÄÑ2:0!*	
+        #3*“
+…activity"c
+*http://schemas.android.com/apk/res/androidname*com.leadersoft.celtica.lsstock.Parametrage(ÉÄÑ"X
+*http://schemas.android.com/apk/res/androidscreenOrientationportrait"$(ûÄÑ2:0$*	
+        &3*÷
+Õactivity"g
+*http://schemas.android.com/apk/res/androidname.com.leadersoft.celtica.lsstock.Synchronisation(ÉÄÑ"X
+*http://schemas.android.com/apk/res/androidscreenOrientationportrait"'(ûÄÑ2:0'*	
+        )3*Ë
+ﬂactivity"y
+*http://schemas.android.com/apk/res/androidname@com.leadersoft.celtica.lsstock.Preparations.AfficherPreparations(ÉÄÑ"X
+*http://schemas.android.com/apk/res/androidscreenOrientationportrait"*(ûÄÑ2:0**	
+        ,3*Î
+‚activity"|
+*http://schemas.android.com/apk/res/androidnameCcom.leadersoft.celtica.lsstock.Preparations.AfficherProduitPreparer(ÉÄÑ"X
+*http://schemas.android.com/apk/res/androidscreenOrientationportrait"-(ûÄÑ2:0-*	
+        /3*‰
+€activity"u
+*http://schemas.android.com/apk/res/androidname<com.leadersoft.celtica.lsstock.Preparations.FairePreparation(ÉÄÑ"X
+*http://schemas.android.com/apk/res/androidscreenOrientationportrait"0(ûÄÑ2:00*	
+        23*Ê
+›activity"w
+*http://schemas.android.com/apk/res/androidname>com.leadersoft.celtica.lsstock.TransfertStock.FaireStockConfig(ÉÄÑ"X
+*http://schemas.android.com/apk/res/androidscreenOrientationportrait"3(ûÄÑ2:03*	
+        53*‰
+€activity"u
+*http://schemas.android.com/apk/res/androidname<com.leadersoft.celtica.lsstock.TransfertStock.FaireTransfert(ÉÄÑ"X
+*http://schemas.android.com/apk/res/androidscreenOrientationportrait"6(ûÄÑ2:06*	
+        83*Î
+‚activity"|
+*http://schemas.android.com/apk/res/androidnameCcom.leadersoft.celtica.lsstock.TransfertStock.AfficherBonsTransfert(ÉÄÑ"X
+*http://schemas.android.com/apk/res/androidscreenOrientationportrait"9(ûÄÑ2:09*	
+        ;3*Â
+‹activity"v
+*http://schemas.android.com/apk/res/androidname=com.leadersoft.celtica.lsstock.Inventaire.AfficherInventaires(ÉÄÑ"X
+*http://schemas.android.com/apk/res/androidscreenOrientationportrait"<(ûÄÑ2:0<*	
+        >3*Á
+ﬁactivity"x
+*http://schemas.android.com/apk/res/androidname?com.leadersoft.celtica.lsstock.Inventaire.FaireInventaireConfig(ÉÄÑ"X
+*http://schemas.android.com/apk/res/androidscreenOrientationportrait"?(ûÄÑ2:0?*	
+        A3*“
+…activity"c
+*http://schemas.android.com/apk/res/androidname*com.leadersoft.celtica.lsstock.SetDeviceId(ÉÄÑ"X
+*http://schemas.android.com/apk/res/androidscreenOrientationportrait"B(ûÄÑ2:0B*	
+        D3*·
+ÿactivity"r
+*http://schemas.android.com/apk/res/androidname9com.leadersoft.celtica.lsstock.Inventaire.FaireInventaire(ÉÄÑ"X
+*http://schemas.android.com/apk/res/androidscreenOrientationportrait"E(ûÄÑ2:0E*	
+        G3*Í
+·activity"{
+*http://schemas.android.com/apk/res/androidnameBcom.leadersoft.celtica.lsstock.Preparations.FairePreparationConfig(ÉÄÑ"X
+*http://schemas.android.com/apk/res/androidscreenOrientationportrait"H(ûÄÑ2:0H*
+
+
+        J3*®
+ü	meta-data"P
+*http://schemas.android.com/apk/res/androidnameandroid.support.VERSION(ÉÄÑ"@
+*http://schemas.android.com/apk/res/androidvalue26.1.0(§ÄÑL*	
+        N%*∏
+Ø	meta-data"W
+*http://schemas.android.com/apk/res/androidnameandroid.arch.lifecycle.VERSION(ÉÄÑ"I
+*http://schemas.android.com/apk/res/androidvalue27.0.0-SNAPSHOT(§ÄÑO*
+    Q.*
+
+
+R

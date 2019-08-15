@@ -1,0 +1,31 @@
+
+Î
+9
+android*http://schemas.android.com/apk/res/androidFrameLayout"e
+*http://schemas.android.com/apk/res/androidid@+id/camera_body"(Ğ„2
+¶€¤øid/camera_body"a
+*http://schemas.android.com/apk/res/androidlayout_heightmatch_parent"(õ„2:0ÿÿÿÿÿÿÿÿÿ"`
+*http://schemas.android.com/apk/res/androidlayout_widthmatch_parent"(ô„2:0ÿÿÿÿÿÿÿÿÿ*
+
+    *Ø
+ÏCheckBox"
+*http://schemas.android.com/apk/res/androidid@+id/camera_scanner_check_incr"(Ğ„2&
+$¸€¤øid/camera_scanner_check_incr"a
+*http://schemas.android.com/apk/res/androidlayout_heightwrap_content"(õ„2:0şÿÿÿÿÿÿÿÿ"U
+*http://schemas.android.com/apk/res/androidlayout_marginLeft10dp"(÷„2:h"T
+*http://schemas.android.com/apk/res/androidlayout_marginTop25dp"(ø„2:h2"`
+*http://schemas.android.com/apk/res/androidlayout_widthmatch_parent"(ô„2:0ÿÿÿÿÿÿÿÿÿ"M
+*http://schemas.android.com/apk/res/androidtextAvec incrÃ©mentation(Ï‚„*
+
+    ,*Ğ
+Ç,me.dm7.barcodescanner.zxing.ZXingScannerView"k
+*http://schemas.android.com/apk/res/androidid@+id/camera_scanner"(Ğ„2
+·€¤øid/camera_scanner"a
+*http://schemas.android.com/apk/res/androidlayout_heightmatch_parent"(õ„2:0ÿÿÿÿÿÿÿÿÿ"U
+*http://schemas.android.com/apk/res/androidlayout_marginTop90dp"(ø„2:h´"`
+*http://schemas.android.com/apk/res/androidlayout_widthmatch_parent"(ô„2:0ÿÿÿÿÿÿÿÿÿ*
+
+    (*
+
+
+3

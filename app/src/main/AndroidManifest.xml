@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.leadersoft.celtica.lsstock">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="false"
+        android:icon="@drawable/ls_stock_icon"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/ls_stock_icon"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:replace="android:allowBackup">
+        <activity android:name=".Preparations.NotificationAlert"></activity>
+        <activity
+            android:name=".EntréeSortie.FaireEntre"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".EntréeSortie.AfficherEntree"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".EntréeSortie.FaireSortie"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".EntréeSortie.AfficherSortie"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Login"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Accueil"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CodeBarScanner"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Parametrage"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Synchronisation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Preparations.AfficherPreparations"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Preparations.AfficherProduitPreparer"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Preparations.FairePreparation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".TransfertStock.FaireStockConfig"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".TransfertStock.FaireTransfert"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".TransfertStock.AfficherBonsTransfert"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Inventaire.AfficherInventaires"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Inventaire.FaireInventaireConfig"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SetDeviceId"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Inventaire.FaireInventaire"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Preparations.FairePreparationConfig"
+            android:screenOrientation="portrait" />
+        
+
+    </application>
+
+</manifest>

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <LinearLayout
+        android:id="@+id/div_bonTransfert_body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="7dp"
+        android:paddingBottom="15dp"
+        android:background="@color/AppColor"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/div_bonTransfert_msg"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+
+            android:layout_marginTop="0dp"
+            android:background="@drawable/bg_supp"
+            android:gravity="center"
+            android:text="SUPPRIMÉ"
+            android:textColor="@color/White"
+            android:textSize="11sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:paddingLeft="15dp"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:layout_width="92dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/cairo_semibold"
+                android:gravity="center"
+                android:text="@string/div_transfert_bon"
+                android:textAlignment="textStart"
+                android:textColor="@color/Black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/div_bonTransfert_bon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/cairo_semibold"
+                android:gravity="center"
+                android:lineSpacingExtra="-13sp"
+                android:paddingLeft="5dp"
+                android:text="BT/00001"
+                android:textAlignment="textStart"
+                android:textColor="@color/White"
+                android:textSize="18sp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-0dp"
+            android:orientation="horizontal"
+            android:paddingLeft="15dp"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:layout_width="92dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/cairo_semibold"
+                android:gravity="center"
+                android:text="@string/div_transfert_depotSrc"
+                android:textAlignment="textStart"
+                android:textColor="@color/Black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/div_bonTransfert_depot"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/cairo_semibold"
+                android:gravity="center"
+                android:paddingLeft="5dp"
+                android:text="DEPOT00001"
+                android:textAlignment="textStart"
+                android:textColor="@color/White"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/div_bonTransfert_depotDestDiv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:orientation="horizontal"
+            android:paddingLeft="15dp"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:layout_width="92dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/cairo_semibold"
+                android:gravity="center"
+                android:text="@string/div_transfert_depotDest"
+                android:textAlignment="textStart"
+                android:textColor="@color/Black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/div_bonTransfert_depotDest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/cairo_semibold"
+                android:gravity="center"
+                android:paddingLeft="5dp"
+                android:text="DEPOT00001"
+                android:textAlignment="textStart"
+                android:textColor="@color/White"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/div_bonTransfert_butt"
+            android:layout_width="165dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:background="@drawable/butt_back_degrade"
+            android:gravity="center"
+            >
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/validate_black"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:fontFamily="@font/cairo_semibold"
+                android:textColor="@color/Black"
+                android:text="@string/div_transfert_faire"/>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

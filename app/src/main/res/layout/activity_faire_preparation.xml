@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_simple"
+    android:focusableInTouchMode="true"
+    android:focusable="true"
+    android:orientation="vertical"
+    tools:context="com.leadersoft.celtica.lsstock.Preparations.FairePreparation">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/AppColor">
+        <ImageView
+            android:id="@+id/faire_prep_addPr"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/add_pr_white"
+            android:layout_gravity="right"/>
+    </FrameLayout>
+
+
+    <TextView
+        android:id="@+id/faire_prep_depot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:lineSpacingExtra="-11dp"
+        android:gravity="center"
+        android:fontFamily="@font/cairo_semibold"
+        android:textSize="16sp"
+        android:textColor="@color/Black"
+        android:text="Dépot: DEPOT00001"/>
+
+    <CheckBox
+        android:id="@+id/fairePrep_cartonCheck"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textSize="16sp"
+        android:text="Ajouter avec conditionnement .."/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/White">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/cairo_semibold"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:textColor="@color/AppColor"
+            android:text="@string/faire_prep_panierLabel"/>
+
+        <!-- DEPRECATED
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="5dp"
+            android:layout_weight="1"
+            android:gravity="left|center"
+            android:textColor="@color/AppColor"
+            android:text="@string/faire_prep_panierPr"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="@color/AppColor"
+            android:text="@string/faire_prep_panierQtCurrent"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingRight="5dp"
+            android:layout_weight="1"
+            android:gravity="right|center"
+            android:textColor="@color/AppColor"
+            android:text="@string/faire_prep_panierQtFinal"/>
+
+            -->
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/faire_prep_panier"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"></android.support.v7.widget.RecyclerView>
+
+
+
+    <TextView
+        android:id="@+id/faire_prep_valider"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:background="@drawable/bg_butt"
+        android:textColor="@color/White"
+        android:textSize="17sp"
+        android:text="@string/login_valider"/>
+
+
+</LinearLayout>

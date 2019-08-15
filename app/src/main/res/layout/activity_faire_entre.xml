@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_simple"
+    android:focusableInTouchMode="true"
+    android:focusable="true"
+    android:orientation="vertical"
+    tools:context="com.leadersoft.celtica.lsstock.Preparations.FairePreparation">
+
+    <LinearLayout
+        android:id="@+id/faireEntre_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/AppColor">
+            <ImageView
+                android:id="@+id/faireEntre_addPr"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/add_pr_white"
+                android:layout_gravity="right"/>
+        </FrameLayout>
+
+
+
+        <TextView
+            android:id="@+id/faireEntre_dep"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="40dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:background="@drawable/bg_butt2"
+            android:textSize="17sp"
+            android:hint="@string/faire_prep_depot"
+            android:textColor="@color/Black"/>
+
+        <CheckBox
+            android:id="@+id/addPr_checkCarton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/cairo_semibold"
+            android:textSize="16sp"
+            android:text="Ajouter avec conditionnement .."/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/White"
+            android:gravity="center"
+            android:fontFamily="@font/cairo_semibold"
+            android:textSize="17sp"
+            android:textColor="@color/AppColor"
+            android:text="Panier"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/faireEntre_panier"
+            android:layout_marginTop="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"></android.support.v7.widget.RecyclerView>
+
+        <TextView
+            android:id="@+id/faireEntre_valider"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:background="@drawable/bg_butt"
+            android:textColor="@color/White"
+            android:textSize="17sp"
+            android:text="@string/login_valider"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/faireEntre_divAddPr"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_simple"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:gravity="center">
+
+
+
+
+
+        <TextView
+            android:id="@+id/faireEntre_pr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/bg_butt2"
+            android:gravity="center"
+            android:textColor="@color/Black"
+            android:textSize="17sp"
+            android:hint="@string/faire_prep_pr"/>
+
+        <EditText
+            android:id="@+id/faireEntre_qt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="15dp"
+            android:inputType="numberDecimal"
+            android:background="@drawable/bg_butt2"
+            android:gravity="center"
+            android:textColor="@color/Black"
+            android:textSize="17sp"
+            android:hint="@string/faire_prep_qt"/>
+
+        <TextView
+            android:id="@+id/faireEntre_validerPr"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/bg_butt"
+            android:gravity="center"
+            android:textColor="@color/White"
+            android:textSize="16sp"
+            android:text="@string/login_valider"/>
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,50 @@
+
+Æ
+9
+android*http://schemas.android.com/apk/res/android
+2
+app'http://schemas.android.com/apk/res-autoLinearLayout"t
+*http://schemas.android.com/apk/res/android
+background@drawable/bg_simple"(Ô„2
+ä€œødrawable/bg_simple"L
+*http://schemas.android.com/apk/res/androidgravitycenter"(¯„2:8"a
+*http://schemas.android.com/apk/res/androidlayout_heightmatch_parent"(õ„2:0ÿÿÿÿÿÿÿÿÿ"`
+*http://schemas.android.com/apk/res/androidlayout_widthmatch_parent"(ô„2:0ÿÿÿÿÿÿÿÿÿ"R
+*http://schemas.android.com/apk/res/androidorientationvertical"(Ä„2:0*
+
+    
+?*Ï
+ÆEditText"r
+*http://schemas.android.com/apk/res/android
+background@drawable/bg_butt2"(Ô„2
+á€œødrawable/bg_butt2"L
+*http://schemas.android.com/apk/res/androidgravitycenter"(¯„2:8"v
+*http://schemas.android.com/apk/res/androidhint@string/config_deviceId"(Ğ‚„2 
+«€¸østring/config_deviceId"c
+*http://schemas.android.com/apk/res/androidid@+id/deviceName"(Ğ„2
+×€¤øid/deviceName"Q
+*http://schemas.android.com/apk/res/androidlayout_height40dp"(õ„2:hP"U
+*http://schemas.android.com/apk/res/androidlayout_marginLeft15dp"(÷„2:h"V
+*http://schemas.android.com/apk/res/androidlayout_marginRight15dp"(ù„2:h"`
+*http://schemas.android.com/apk/res/androidlayout_widthmatch_parent"(ô„2:0ÿÿÿÿÿÿÿÿÿ"i
+*http://schemas.android.com/apk/res/androidtextColorHint@color/Gray2"(š„2
+„€”øcolor/Gray2"L
+*http://schemas.android.com/apk/res/androidtextSize16sp"(•„2:h‚ *
+
+    .*ì
+ãTextView"p
+*http://schemas.android.com/apk/res/android
+background@drawable/bg_butt"(Ô„2
+à€œødrawable/bg_butt"L
+*http://schemas.android.com/apk/res/androidgravitycenter"(¯„2:8"q
+*http://schemas.android.com/apk/res/androidid@+id/validerDeviceName"(Ğ„2
+Ä‚¤øid/validerDeviceName"Q
+*http://schemas.android.com/apk/res/androidlayout_height40dp"(õ„2:hP"T
+*http://schemas.android.com/apk/res/androidlayout_marginTop20dp"(ø„2:h("R
+*http://schemas.android.com/apk/res/androidlayout_width120dp"(ô„2:hğ"r
+*http://schemas.android.com/apk/res/androidtext@string/login_valider"(Ï‚„2
+Ù€¸østring/login_valider"e
+*http://schemas.android.com/apk/res/android	textColor@color/White"(˜„2
+ˆ€”øcolor/White"L
+*http://schemas.android.com/apk/res/androidtextSize17sp"(•„2:h‚"*	
+#.

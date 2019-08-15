@@ -1,0 +1,74 @@
+
+ö
+9
+android*http://schemas.android.com/apk/res/androidLinearLayout"f
+*http://schemas.android.com/apk/res/android
+background@color/White"(Ô„2
+ˆ€”øcolor/White"a
+*http://schemas.android.com/apk/res/androidlayout_heightwrap_content"(õ„2:0şÿÿÿÿÿÿÿÿ"`
+*http://schemas.android.com/apk/res/androidlayout_widthmatch_parent"(ô„2:0ÿÿÿÿÿÿÿÿÿ"R
+*http://schemas.android.com/apk/res/androidorientationvertical"(Ä„2:0*
+    &*
+†LinearLayout"a
+*http://schemas.android.com/apk/res/androidlayout_heightwrap_content"(õ„2:0şÿÿÿÿÿÿÿÿ"W
+*http://schemas.android.com/apk/res/androidlayout_marginBottom20dp"(ú„2:h("T
+*http://schemas.android.com/apk/res/androidlayout_marginTop20dp"(ø„2:h("`
+*http://schemas.android.com/apk/res/androidlayout_widthmatch_parent"(ô„2:0ÿÿÿÿÿÿÿÿÿ"R
+*http://schemas.android.com/apk/res/androidorientationvertical"(Ä„2:0*
+
+
+        '*¹
+°TextView"L
+*http://schemas.android.com/apk/res/androidgravitycenter"(¯„2:8"k
+*http://schemas.android.com/apk/res/androidid@+id/div_msgInp_msg"(Ğ„2
+ó€¤øid/div_msgInp_msg"S
+*http://schemas.android.com/apk/res/androidlayout_gravitycenter"(³„2:8"a
+*http://schemas.android.com/apk/res/androidlayout_heightwrap_content"(õ„2:0şÿÿÿÿÿÿÿÿ"T
+*http://schemas.android.com/apk/res/androidlayout_marginTop10dp"(ø„2:h"`
+*http://schemas.android.com/apk/res/androidlayout_widthmatch_parent"(ô„2:0ÿÿÿÿÿÿÿÿÿ"D
+*http://schemas.android.com/apk/res/androidtextMon Message(Ï‚„"e
+*http://schemas.android.com/apk/res/android	textColor@color/Black"(˜„2
+€”øcolor/Black"L
+*http://schemas.android.com/apk/res/androidtextSize17sp"(•„2:h‚"*
+
+
+        (*è
+ßEditText"r
+*http://schemas.android.com/apk/res/android
+background@drawable/bg_butt2"(Ô„2
+á€œødrawable/bg_butt2"D
+*http://schemas.android.com/apk/res/androidhintMon Hint ..(Ğ‚„"o
+*http://schemas.android.com/apk/res/androidid@+id/div_msgInp_value"(Ğ„2
+ô€¤øid/div_msgInp_value"N
+*http://schemas.android.com/apk/res/android	inputTypenumber"( „„2:8"Q
+*http://schemas.android.com/apk/res/androidlayout_height40dp"(õ„2:hP"U
+*http://schemas.android.com/apk/res/androidlayout_marginLeft10dp"(÷„2:h"V
+*http://schemas.android.com/apk/res/androidlayout_marginRight10dp"(ù„2:h"T
+*http://schemas.android.com/apk/res/androidlayout_marginTop20dp"(ø„2:h("`
+*http://schemas.android.com/apk/res/androidlayout_widthmatch_parent"(ô„2:0ÿÿÿÿÿÿÿÿÿ"e
+*http://schemas.android.com/apk/res/android	textColor@color/Black"(˜„2
+€”øcolor/Black"i
+*http://schemas.android.com/apk/res/androidtextColorHint@color/Gray2"(š„2
+„€”øcolor/Gray2"L
+*http://schemas.android.com/apk/res/androidtextSize17sp"(•„2:h‚"*
+
+
+        '(*»
+²TextView"p
+*http://schemas.android.com/apk/res/android
+background@drawable/bg_butt")(Ô„2
+à€œødrawable/bg_butt"L
+*http://schemas.android.com/apk/res/androidgravitycenter")(¯„2:8"k
+*http://schemas.android.com/apk/res/androidid@+id/div_msgInp_add")(Ğ„2
+ò€¤øid/div_msgInp_add"S
+*http://schemas.android.com/apk/res/androidlayout_gravitycenter")(³„2:8"Q
+*http://schemas.android.com/apk/res/androidlayout_height40dp")(õ„2:hP"T
+*http://schemas.android.com/apk/res/androidlayout_marginTop15dp")(ø„2:h"R
+*http://schemas.android.com/apk/res/androidlayout_width120dp")(ô„2:hğ"r
+*http://schemas.android.com/apk/res/androidtext@string/login_valider")(Ï‚„2
+Ù€¸østring/login_valider"e
+*http://schemas.android.com/apk/res/android	textColor@color/White")(˜„2
+ˆ€”øcolor/White"L
+*http://schemas.android.com/apk/res/androidtextSize17sp")(•„2:h‚")*
+    42*	
+5

@@ -1,0 +1,25 @@
+
+
+9
+android*http://schemas.android.com/apk/res/androidmenu*
+
+
+    A*Í
+Äitem"d
+*http://schemas.android.com/apk/res/androidicon@drawable/sync"(‚€„2
+†œødrawable/sync"a
+*http://schemas.android.com/apk/res/androidid@+id/menu_sync"(Ğ„2
+¼¤øid/menu_sync"s
+*http://schemas.android.com/apk/res/androidtitle@string/import_export"(áƒ„2
+Ğ€¸østring/import_export*
+    0*Í
+Äitem"f
+*http://schemas.android.com/apk/res/androidicon@drawable/param"	(‚€„2
+„œødrawable/param"o
+*http://schemas.android.com/apk/res/androidid@+id/menu_parametrage"	(Ğ„2
+»¤øid/menu_parametrage"c
+*http://schemas.android.com/apk/res/androidtitle@string/param"	(áƒ„2
+İ€¸østring/param	*
+
+
+(

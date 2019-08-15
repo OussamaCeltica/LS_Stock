@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <LinearLayout
+        android:id="@+id/div_pr_panier_body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:minHeight="40dp"
+        android:background="@color/AppColor">
+        <TextView
+            android:id="@+id/div_pr_panier_pr"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="5dp"
+            android:paddingRight="3dp"
+            android:layout_weight="1"
+            android:gravity="left|center"
+            android:fontFamily="@font/cairo_semibold"
+            android:lineSpacingExtra="-12sp"
+            android:textSize="16sp"
+            android:textColor="@color/White"
+            android:text="Odoris FRaicheur 400 ml Odeur Fraise"/>
+
+        <TextView
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:background="@color/White"/>
+
+        <TextView
+            android:id="@+id/div_pr_panier_qt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:fontFamily="@font/cairo_semibold"
+            android:lineSpacingExtra="-12sp"
+            android:textSize="16sp"
+            android:textColor="@color/White"
+            android:text="100"/>
+
+        <TextView
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:background="@color/White"/>
+
+        <TextView
+            android:id="@+id/div_pr_panier_packaging"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingRight="5dp"
+            android:layout_weight="1"
+            android:gravity="center|right"
+            android:fontFamily="@font/cairo_semibold"
+            android:lineSpacingExtra="-12sp"
+            android:textSize="16sp"
+            android:textColor="@color/White"
+            android:text="lol"/>
+
+    </LinearLayout>
+
+</LinearLayout>

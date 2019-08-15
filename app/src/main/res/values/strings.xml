@@ -1,0 +1,180 @@
+<resources>
+    <string name="app_name">LS Stock</string>
+
+    <string name="config_type_scanner">Scanner Intégré</string>
+    <string name="config_type_sansscanner">Sans Scanner</string>
+    <string name="config_deviceId">Donner un identifiant pour l appareil ..</string>
+    <string name="bon_titre">Bon:</string>
+
+    <string name="login_cnct">Connexion</string>
+    <string name="login_mode_titr">Mode d\'accés:</string>
+    <string name="login_mode">Choisir le mode d\'accés </string>
+    <string name="login_modeAdmin">Admin</string>
+    <string name="login_modeEmploye">Employé</string>
+    <string name="login_emp">Séléctionner un employé</string>
+    <string name="login_valider">Valider</string>
+    <string name="login_noEmpSelect">Veuillez séléctionner un employé !</string>
+    <string name="sync">Synchronisation</string>
+    <string name="import_export">Import/Export</string>
+    <string name="sortie_stock">Sortie de Stock</string>
+    <string name="entre_stock">Entrée de stock</string>
+
+    <!-- String ETAT -->
+    <string name="etat_cours">EN COURS</string>
+    <string name="etat_exporté">EXPORTÉ</string>
+    <string name="etat_validé">VALIDÉ</string>
+    <string name="etat_supprimé">SUPPRIMÉ</string>
+
+
+    <!-- String Parametrage -->
+    <string name="param_titreAdmin">Administrateur</string>
+    <string name="param_LabelAdmin">Nom Admin:</string>
+    <string name="param_HinAdmin">Donner le nom d admin</string>
+
+    <string name="param_archive_titre">Archive des exportations ou suppressions.</string>
+    <string name="param_archive_desc">afficher les bons de transfert et les bons d\'inventaire déja exporté ou supprimé. </string>
+
+    <string name="param_LabelMdp">Mot de passe:</string>
+    <string name="param_HintMdp">Donner le mot de passe</string>
+
+    <string name="param_conn">Valider</string>
+
+    <string name="param_mdp_err">Mot de passe incorrect</string>
+    <string name="param_user_err">Nom d admin incorrect</string>
+
+    <string name="param">Parametrage</string>
+    <string name="param_deconect_titre">Déconnecter</string>
+    <string name="param_deconect_desc">Fermer la session actuel d\'un chef de ligne </string>
+
+    <string name="param_admin_ChangeMdp">Changer le mot de passe d\'admin</string>
+    <string name="param_admin_DescChangeMdp">Changer le nom et le mot de passe d\'admin</string>
+    <string name="param_admin_ChangeMdp_nomAdmin">Nom d\'admin ..</string>
+    <string name="param_admin_ChangeMdp_Actuel">Mot de passe actuel ..</string>
+    <string name="param_admin_ChangeMdp_New">Nouveau mot de passe ..</string>
+    <string name="param_admin_ChangeMdp_succes">Bien changé.</string>
+    <string name="param_admin_ChangeMdp_err">Mot de passe actuel incorrect.</string>
+
+    <string name="param_typeDevice_titre">Changer le type de mobile</string>
+    <string name="param_typeDevice_desc">changer le mode de scanner codebarre </string>
+    <string name="remplissage_err">Veuillez remplissez tous les champs.</string>
+    <string name="codebar_noExist">Ce codebarre n\'existe pas</string>
+
+    <string name="param_sql_titre">Configuration du serveur</string>
+    <string name="param_sql_desc">configuration des cordonnées du serveur pour la synchronisation</string>
+
+    <string name="param_deviecId_titre">Changer l\'identifiant mobile</string>
+    <string name="param_deviecId_desc">changer l\identifiant de l appareil mobile. </string>
+
+    <string name="param_bd_formate_titre">Réinitialisation de l\'appareil</string>
+    <string name="param_bd_format_desc">Permet de videz toutes les tables sans synchronisation.</string>
+    <string name="param_bd_format_confirm">Voulez vraiment supprimer les données !</string>
+    <string name="param_bd_format_succ">Les données sont supprimé.</string>
+
+
+    <!-- String Preparations -->
+    <string name="prep_titre">Préparation:</string>
+    <string name="div_prep_produit">Produit:</string>
+    <string name="div_prep_depot">Dépôt:</string>
+    <string name="div_prep_qt_final">QT à Préparer:</string>
+    <string name="div_prep_current_qt">QT Préparé :</string>
+    <string name="div_prep_carton">Carton:</string>
+    <string name="div_prep_codeBon">Code Bon:</string>
+    <string name="div_prep_dateBon">Date:</string>
+    <string name="div_prep_addPrep">Préparer</string>
+    <string name="div_prep_clt">Client:</string>
+    <string name="faire_prep_pr">Séléctionner un produit ..</string>
+    <string name="faire_prep_depot">Séléctionner un dépôt ..</string>
+    <string name="faire_prep_depotDest">Séléctionner le dépôt destination</string>
+    <string name="faire_prep_qt">Donner une quantité</string>
+    <string name="faire_prep_panierLabel">Panier</string>
+
+    <string name="faire_prep_panierPr">Produit</string>
+    <string name="faire_prep_panierQtCurrent">QT Préparer</string>
+    <string name="faire_prep_panierQtFinal">QT final</string>
+    <string name="affPrep_search">Chercher un produit ou dépot ..</string>
+    <string name="affPrep_validerBon">Terminer Préparation</string>
+
+    <string name="prep_titre_valide">Validé</string>
+    <string name="prep_titre_cours">En cours</string>
+
+    <string name="aff_prep_searchHint">chercher un bon ..</string>
+    <string name="aff_prep_noPrep">Aucune préparation est faite ..</string>
+
+
+    <!-- String Transfert de stock -->
+    <string name="panier_pr_titre">Produit</string>
+    <string name="panier_qt_titre">Quantité</string>
+    <string name="div_transfert_bon">Bon:</string>
+    <string name="div_transfert_depot">Dépôt:</string>
+    <string name="div_transfert_faire">Valider Transfert</string>
+    <string name="config_transfert_noCodebar">Ce codebarre n\'existe pas. </string>
+    <string name="div_transfert_depotSrc">Dépôt Src: </string>
+    <string name="div_transfert_depotDest">Dépôt Dest: </string>
+    <string name="faire_transf_changerQt">Modifier la quantité </string>
+    <string name="faire_transf_changerQtLabel">qt:</string>
+    <string name="faire_transf_changerQtHint">Donner une quantité ..</string>
+    <string name="faire_transf_suppPr">Voulez vraiment supprimer ?</string>
+    <string name="faire_transf_suppPr_oui">Oui</string>
+    <string name="faire_transf_qt_packaging">conditionné</string>
+    <string name="faire_transf_qt_packagingAutoriser">Ajouter avec conditionnement</string>
+    <string name="faire_transf_qt_unité">unité</string>
+    <string name="faire_transf_noEmp">Veuillez séléctionner un employé</string>
+    <string name="faire_transf_qt_type">Type</string>
+    <string name="panier_noVide_quiter">Voulez vraiment quitter !</string>
+    <string name="faire_transf_conect_err">Vérifier votre connexion avec le serveur pour que vous puissiez valider le bon de transfert !</string>
+    <string name="faire_transf_panierVide">Aucun produit séléctionné !</string>
+    <string name="faire_transf_searchBon">Chercher un bon transfert .. </string>
+
+
+    <!-- String Inventaire -->
+    <string name="inventaire">Inventaire</string>
+    <string name="div_invent_date">date:</string>
+    <string name="faire_invent_conect_err">Le bon d\'inventaire est ajouté mais non synchroniser.</string>
+    <string name="faire_invent_searchBon">Chercher un bon d\'inventaire .. </string>
+
+    <!-- String entrée de stock -->
+    <string name="faireEntre_conect_err">Le bon d\'entrée est ajouté mais non synchroniser.</string>
+    <string name="faireEntre_fournisse">Séléctionner un fournisseur ..</string>
+    <string name="faireEntre_noDepot">Veuillez séléctionner un dépôt ..</string>
+    <string name="faireEntre_noEmp">Veuillez accéder en mode employé ..</string>
+    <string name="divEntre_fournis">Fournisseur:</string>
+    <string name="faireEntre_qt">Quantité</string>
+    <string name="faireEntre_depot">Depot Dest</string>
+    <string name="faireEntre_pr">Produit</string>
+    <string name="affEntre_searchHint">Chercher un bon d\'entrée ..</string>
+
+    <!-- String SortieStock -->
+    <string name="faireSortie_conect_err">Le bon de sortie est ajouté mais non synchroniser.</string>
+    <string name="faireSortie_clt">Séléctionner un client ..</string>
+    <string name="affSortie_searchHint">Chercher un bon de sortie ..</string>
+
+
+    <!-- String de Synchronisation -->
+    <string name="sync_conect_succ">Connexion réussite.</string>
+    <string name="sync_conect_err">Erreur, Réesayez ..</string>
+    <string name="sync_sql_err">Erreur de connexion ..</string>
+    <string name="sync_titre">Synchronisation ..</string>
+    <string name="sync_wait">attendez SVP ..</string>
+    <string name="sync_conect">Connexion ..</string>
+    <string name="sync_succ">Synchronisation terminé </string>
+
+
+    <!-- String de Archiver -->
+    <string name="archive_transfert">Archive des transferts</string>
+    <string name="archive_inventaire">Archive des Inventaires</string>
+    <string name="archive_préparation">Archive des Préparations</string>
+    <string name="archive_entree">Archive des Entrées</string>
+    <string name="archive_sortie">Archive des Sorties</string>
+    <string name="add_ok">Bien ajouté.</string>
+    <string name="affPrep_validé">VALIDÉ</string>
+    <string name="faire_prep_conect_err">La préparation est validé mais non synchroniser</string>
+    <string name="divSortie_clt">Client:</string>
+    <string name="bons_titre">Bons</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="carton_noQt">Ce produit n a pas de carton.</string>
+
+
+</resources>

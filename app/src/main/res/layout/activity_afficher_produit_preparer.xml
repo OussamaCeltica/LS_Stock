@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_simple"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    android:id="@+id/affprep_root"
+    tools:context="com.leadersoft.celtica.lsstock.Preparations.AfficherProduitPreparer">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/AppColor">
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:padding="2dp"
+            android:src="@drawable/loop"/>
+        <EditText
+            android:id="@+id/affprep_saerch"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="40dp"
+            android:layout_marginLeft="40dp"
+            android:background="@drawable/butt_back_degrade"
+            android:fontFamily="@font/cairo_semibold"
+            android:hint="@string/affPrep_search"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:textColor="@color/Black"
+            android:textColorHint="@color/AppColor"
+            />
+        <ImageView
+            android:id="@+id/affprep_addPrep"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:padding="2dp"
+            android:layout_gravity="right"
+            android:src="@drawable/add_pr_white"/>
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/affPrep_numBon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:textColor="@color/AppColor"
+        android:textSize="16sp"
+        android:text="Bon: BP/ 00000001"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/div_affich_pr_prep"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1">
+    </android.support.v7.widget.RecyclerView>
+
+
+    <LinearLayout
+        android:id="@+id/affprep_validerBon"
+        android:layout_width="210dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:layout_gravity="center"
+        android:background="@drawable/bg_butt">
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:padding="3dp"
+            android:src="@drawable/valid"/>
+        <TextView
+            android:layout_width="160dp"
+            android:layout_height="35dp"
+            android:gravity="center|left"
+            android:textColor="@color/White"
+            android:text="@string/affPrep_validerBon"/>
+    </LinearLayout>
+
+
+</LinearLayout>

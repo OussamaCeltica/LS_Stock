@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <LinearLayout
+        android:id="@+id/div_bonTransfert_body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="7dp"
+        android:paddingBottom="10dp"
+        android:background="@color/AppColor"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/div_bonTransfert_msg"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+
+            android:background="@drawable/bg_export"
+            android:gravity="center"
+            android:text="EXPORTÉ"
+            android:textColor="@color/White"
+            android:textSize="11sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:paddingLeft="15dp"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:layout_width="92dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/cairo_semibold"
+                android:gravity="center"
+                android:text="@string/div_transfert_bon"
+                android:textAlignment="textStart"
+                android:textColor="@color/Black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/div_bonTransfert_bon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/cairo_semibold"
+                android:gravity="center"
+                android:lineSpacingExtra="-13sp"
+                android:paddingLeft="5dp"
+                android:text="BT/00001"
+                android:textAlignment="textStart"
+                android:textColor="@color/White"
+                android:textSize="18sp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="15dp"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:layout_width="92dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/cairo_semibold"
+                android:gravity="center"
+                android:lineSpacingExtra="-11dp"
+                android:text="@string/div_transfert_depotSrc"
+                android:textAlignment="textStart"
+                android:textColor="@color/Black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/div_bonTransfert_depotSrc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/cairo_semibold"
+                android:gravity="center"
+                android:paddingLeft="5dp"
+                android:lineSpacingExtra="-11dp"
+                android:text="DEPOT00001"
+                android:textAlignment="textStart"
+                android:textColor="@color/White"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="15dp"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:layout_width="92dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/cairo_semibold"
+                android:gravity="center"
+                android:text="@string/div_transfert_depotDest"
+                android:textAlignment="textStart"
+                android:textColor="@color/Black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/div_bonTransfert_depotDest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/cairo_semibold"
+                android:gravity="center"
+                android:paddingLeft="5dp"
+                android:text="DEPOT00001"
+                android:textAlignment="textStart"
+                android:textColor="@color/White"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/div_bonTransfert_divPr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:paddingLeft="15dp"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:layout_width="92dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/cairo_semibold"
+                android:gravity="center"
+                android:text="@string/div_prep_produit"
+                android:textAlignment="textStart"
+                android:textColor="@color/Black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/div_bonTransfert_pr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/cairo_semibold"
+                android:gravity="center"
+                android:paddingLeft="4dp"
+                android:text="DIVERS"
+                android:textAlignment="textStart"
+                android:textColor="@color/White"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

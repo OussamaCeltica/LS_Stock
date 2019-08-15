@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+
+    <RadioGroup
+        android:id="@+id/check_incr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RadioButton
+            android:id="@+id/avec"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Avec Incrémentation"/>
+
+        <RadioButton
+            android:id="@+id/sans"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Sans Incrémentation"/>
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/check_valider"
+        android:layout_width="110dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_butt"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:textColor="@color/White"
+        android:text="@string/login_valider"/>
+
+</LinearLayout>
