@@ -39,7 +39,7 @@ public class Produit {
     }
 
     public boolean existe(){
-        Cursor r=Accueil.bd.read2("select * from produit where codebar=? or defaultCarton_codebar=?",new String[]{codebar,codebar});
+        Cursor r=Accueil.bd.read2("select * from produit where codebar=? or defaultCarton_codebar=?",new String[]{codebar+"",codebar+""});
         if(r.moveToNext()){
             this.nom=r.getString(r.getColumnIndex("nom_pr"));
             this.qt_carton=r.getDouble(r.getColumnIndex("qt_carton"));

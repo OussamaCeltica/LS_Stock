@@ -3,6 +3,9 @@ package com.leadersoft.celtica.lsstock.Preparations;
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Rect;
+import android.os.Build;
+import android.os.Handler;
+import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -25,6 +28,7 @@ import com.leadersoft.celtica.lsstock.ArchiveMenuFrag;
 import com.leadersoft.celtica.lsstock.ETAT;
 import com.leadersoft.celtica.lsstock.Login;
 import com.leadersoft.celtica.lsstock.R;
+import com.leadersoft.celtica.lsstock.TransfertStock.AfficherBonsTransfert;
 
 public class AfficherPreparations extends AppCompatActivity {
 
@@ -107,8 +111,10 @@ public class AfficherPreparations extends AppCompatActivity {
 
             //region prep validé
             ((LinearLayout)findViewById(R.id.affprep_prepValid)).setOnClickListener(new View.OnClickListener() {
+                @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
                 @Override
                 public void onClick(View view) {
+                    ButtClick(view);
                     type_bon=TypeBon.VALIDÉ;
                     setTypeBonTitre(getResources().getString(R.string.prep_titre_valide));
                     Cursor r=Accueil.bd.read("select * from bon_preparation where valider='1' and sync='0' order by date_bon desc");
@@ -119,8 +125,10 @@ public class AfficherPreparations extends AppCompatActivity {
 
             //region prep en cours
             ((LinearLayout)findViewById(R.id.affprep_prepCours)).setOnClickListener(new View.OnClickListener() {
+                @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
                 @Override
                 public void onClick(View view) {
+                    ButtClick(view);
                     type_bon=TypeBon.EN_COURS;
                     setTypeBonTitre(getResources().getString(R.string.prep_titre_cours));
                     Cursor r=Accueil.bd.read("select * from bon_preparation where valider='0' order by date_bon desc");
@@ -181,6 +189,7 @@ public class AfficherPreparations extends AppCompatActivity {
                 ((ImageView)findViewById(R.id.affprep_addPrep)).setVisibility(View.GONE);
                 searchInp.setInputType(InputType.TYPE_NULL);
                 searchInp.setBackgroundColor(getResources().getColor(R.color.AppColor));
+
                 Cursor r = Accueil.bd.read("select * from bon_preparation where sync='1' order by date_bon desc ");
                 BonPreparationAdapter.bons.clear();
                 while (r.moveToNext()){
@@ -215,13 +224,28 @@ public class AfficherPreparations extends AppCompatActivity {
         ((TextView)findViewById(R.id.affprep_titre)).setText(Html.fromHtml("<span><font color='black'>"+getResources().getString(R.string.prep_titre)+"</font> "+type+"</span>"));
     }
 
+
+
+    public enum TypeBon{
+        VALIDÉ,EN_COURS
+    }
+
+    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
+    public  void ButtClick(final View view){
+
+        view.setBackground(getResources().getDrawable(R.drawable.bg_butt_fonce));
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                view.setBackground(getResources().getDrawable(R.drawable.butt_back_degrade));
+            }
+        },200);
+        Login.session.playAudioFromAsset(AfficherPreparations.this,"klik.ogg");
+    }
+
     @Override
     protected void onDestroy() {
         super.onDestroy();
         BonPreparationAdapter.bons.clear();
-    }
-
-    public enum TypeBon{
-        VALIDÉ,EN_COURS
     }
 }

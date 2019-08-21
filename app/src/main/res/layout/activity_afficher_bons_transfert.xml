@@ -58,9 +58,68 @@
             android:id="@+id/div_affich_bonTransfert"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginBottom="10dp"
             android:layout_marginTop="20dp">
 
         </android.support.v7.widget.RecyclerView>
+
+        <LinearLayout
+            android:id="@+id/affTrans_divOptions"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="bottom"
+            android:background="@color/AppColor">
+
+            <LinearLayout
+                android:id="@+id/affTrans_prepCours"
+                android:layout_width="110dp"
+                android:layout_height="match_parent"
+                android:layout_margin="3dp"
+                android:background="@drawable/butt_back_degrade"
+                >
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:padding="3dp"
+                    android:src="@drawable/wait"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/cairo_semibold"
+                    android:textColor="@color/Black"
+                    android:textSize="16sp"
+                    android:text="En cours"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/affTrans_prepValid"
+                android:layout_width="110dp"
+                android:layout_height="match_parent"
+                android:layout_margin="3dp"
+                android:background="@drawable/butt_back_degrade"
+                >
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:padding="2dp"
+                    android:src="@drawable/validate_black"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/cairo_semibold"
+                    android:textColor="@color/Black"
+                    android:textSize="16sp"
+                    android:text="Validé"/>
+            </LinearLayout>
+
+        </LinearLayout>
 
     </LinearLayout>
 </LinearLayout>

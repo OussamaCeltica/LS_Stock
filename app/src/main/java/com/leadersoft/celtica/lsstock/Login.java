@@ -16,7 +16,9 @@ import android.widget.Toast;
 
 import com.leadersoft.celtica.lsstock.MySpinner.MySpinnerSearchable;
 import com.leadersoft.celtica.lsstock.MySpinner.SpinnerItem;
+import com.leadersoft.celtica.lsstock.Preparations.BonPreparation;
 import com.leadersoft.celtica.lsstock.Preparations.ProduitDansBon;
+import com.leadersoft.celtica.lsstock.TransfertStock.BonTransfertEnCours;
 import com.leadersoft.celtica.lsstock.TransfertStock.BonsTransfertAdapter;
 import com.leadersoft.celtica.lsstock.TransfertStock.FaireStockConfig;
 import com.leadersoft.celtica.lsstock.TransfertStock.FaireTransfert;
@@ -62,7 +64,7 @@ public class Login extends AppCompatActivity {
 
 
 
-        //Accueil.bd.write("update bon_transfert set sync='0',codebar_depot_dest=null   ");
+        //Accueil.bd.write("update bon_transfert  set date_transfert='2020-05-05 15:25'  where id='3'   ");
         //Accueil.bd.write("insert into fournisseur (code_fournis,nom_fournis) values('f0001','Amine Jade')");
         //Accueil.bd.write("insert into employe (code_emp,nom_emp,codebar,Oid) values('EMP00001','Mohamed Rezoug','6130093010045','prrrrr')");
         //Accueil.bd.write("insert into depot (codebar,nom_dep) values('6130552001225','DEPOT0001')");
@@ -76,10 +78,23 @@ public class Login extends AppCompatActivity {
         //Accueil.bd.write("insert into produit_preparer (code_bon,codebar_pr,nom_pr,codebar_depot,nom_depot,codebar_lot,final_qt,current_qt) values('BP/30001','35521546563','Intermec Printer','6130552001225','DEPOT0001','6130552001225','10','0')");
 
 
-        Cursor r3=Accueil.bd.read("select * from produit limit 5");
+        //ProduitDansBon p=new ProduitDansBon("6132503463960","Détergent Savon de Marseille 1L ", null+"" , "Retour Produit", 16 , 0);
+        //p.addToBD("BPS2019/00004");
+
+        //BonPreparation b=new BonPreparation("BPS2019/00004","2013-03-10","snvndksnq;dnnfsq");
+       // b.addToBD();
+
+        Cursor r3=Accueil.bd.read("select * from produit_preparer limit 30");
         while (r3.moveToNext()){
-            Log.e("ddd",r3.getString(r3.getColumnIndex("codebar"))+"");
+            String s=String.format("%s / %s / %s / %s / %s / %s / %s / %s ",r3.getString(r3.getColumnIndex("code_bon")),r3.getString(r3.getColumnIndex("codebar_pr")),r3.getString(r3.getColumnIndex("nom_pr")),r3.getString(r3.getColumnIndex("codebar_depot")),r3.getString(r3.getColumnIndex("codebar_depot")),r3.getString(r3.getColumnIndex("nom_depot")),r3.getString(r3.getColumnIndex("final_qt")),r3.getString(r3.getColumnIndex("current_qt")));
+            Log.e("ddd",s+"");
         }
+
+
+
+
+
+
 
 
 

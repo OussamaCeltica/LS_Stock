@@ -26,6 +26,7 @@ public class UpdaterBD {
 
                     while (code != info.versionCode) {
                         switch (code) {
+
                             case 1: {
                                 try {
                                     Accueil.bd.write("Alter table bon_preparation add valider  VARCHAR (2)");
@@ -35,7 +36,7 @@ public class UpdaterBD {
                                 }
 
                             }break;
-                            case 8:{
+                            case 8: {
                                 try {
                                     Accueil.bd.write("Alter table produit add defaultCarton_codebar  VARCHAR (30)");
 
@@ -131,12 +132,181 @@ public class UpdaterBD {
                                 }catch (Exception e){
                                     e.printStackTrace();
                                 }
-                            }
+                            }break;
+                            case 21:{
+
+                                Log.e("ddd"," NI DKHELT");
+                                try {
+
+                                    Accueil.bd.write("CREATE TABLE sqlitestudio_temp_table AS SELECT *\n" +
+                                            "                                          FROM bon_entree;");
+                                    Accueil.bd.write("DROP TABLE bon_entree;");
+
+                                    Accueil.bd.write("CREATE TABLE bon_entree (\n" +
+                                            "    code_bon     INTEGER,\n" +
+                                            "    date_bon     VARCHAR (30),\n" +
+                                            "    code_emp     VARCHAR (100),\n" +
+                                            "    code_fournis VARCHAR (30),\n" +
+                                            "    nom_fournis  VARCHAR (100),\n" +
+                                            "    etat         VARCHAR (30),\n" +
+                                            "    sync         VARCHAR (3),\n" +
+                                            "    PRIMARY KEY (\n" +
+                                            "        code_bon\n" +
+                                            "    )\n" +
+                                            ");");
+
+                                    Accueil.bd.write("INSERT INTO bon_entree (\n" +
+                                            "                           code_bon,\n" +
+                                            "                           date_bon,\n" +
+                                            "                           code_emp,\n" +
+                                            "                           code_fournis,\n" +
+                                            "                           nom_fournis,\n" +
+                                            "                           etat,\n" +
+                                            "                           sync\n" +
+                                            "                       )\n" +
+                                            "                       SELECT code_bon,\n" +
+                                            "                              date_bon,\n" +
+                                            "                              code_emp,\n" +
+                                            "                              code_fournis,\n" +
+                                            "                              nom_fournis,\n" +
+                                            "                              etat,\n" +
+                                            "                              sync\n" +
+                                            "                         FROM sqlitestudio_temp_table;");
+
+                                    Accueil.bd.write("DROP TABLE sqlitestudio_temp_table;");
+
+                                    /*------------------- Table 2 -------------------*/
+
+                                    Accueil.bd.write("CREATE TABLE sqlitestudio_temp_table AS SELECT *\n" +
+                                            "                                          FROM bon_inventaire;");
+                                    Accueil.bd.write("DROP TABLE bon_inventaire;");
+
+                                    Accueil.bd.write("CREATE TABLE bon_inventaire (\n" +
+                                            "    id_bon          INTEGER       NOT NULL\n" +
+                                            "                                  PRIMARY KEY,\n" +
+                                            "    code_emp        VARCHAR (100),\n" +
+                                            "    code_depot      VARCHAR (100),\n" +
+                                            "    nom_depot       VARCHAR (200),\n" +
+                                            "    date_inventaire DATETIME,\n" +
+                                            "    sync            VARCHAR (2),\n" +
+                                            "    etat            VARCHAR (30) \n" +
+                                            ");");
+
+                                    Accueil.bd.write("INSERT INTO bon_inventaire (\n" +
+                                            "                               id_bon,\n" +
+                                            "                               code_emp,\n" +
+                                            "                               code_depot,\n" +
+                                            "                               nom_depot,\n" +
+                                            "                               date_inventaire,\n" +
+                                            "                               sync,\n" +
+                                            "                               etat\n" +
+                                            "                           )\n" +
+                                            "                           SELECT id_bon,\n" +
+                                            "                                  code_emp,\n" +
+                                            "                                  code_depot,\n" +
+                                            "                                  nom_depot,\n" +
+                                            "                                  date_inventaire,\n" +
+                                            "                                  sync,\n" +
+                                            "                                  etat\n" +
+                                            "                             FROM sqlitestudio_temp_table;\n");
+
+                                    Accueil.bd.write("DROP TABLE sqlitestudio_temp_table;");
+
+
+                                    /*------------------- Table 2 -------------------*/
+
+                                    Accueil.bd.write("CREATE TABLE sqlitestudio_temp_table AS SELECT *\n" +
+                                            "                                          FROM bon_sortie;\n");
+                                    Accueil.bd.write("DROP TABLE bon_sortie;");
+
+                                    Accueil.bd.write("CREATE TABLE bon_sortie (\n" +
+                                            "    code_bon INTEGER,\n" +
+                                            "    date_bon VARCHAR (30),\n" +
+                                            "    code_clt VARCHAR (30),\n" +
+                                            "    nom_clt  VARCHAR (100),\n" +
+                                            "    code_emp VARCHAR (100),\n" +
+                                            "    etat     VARCHAR (30),\n" +
+                                            "    sync     VARCHAR (3),\n" +
+                                            "    PRIMARY KEY (\n" +
+                                            "        code_bon\n" +
+                                            "    )\n" +
+                                            ");");
+
+                                    Accueil.bd.write("INSERT INTO bon_sortie (\n" +
+                                            "                           code_bon,\n" +
+                                            "                           date_bon,\n" +
+                                            "                           code_clt,\n" +
+                                            "                           nom_clt,\n" +
+                                            "                           code_emp,\n" +
+                                            "                           etat,\n" +
+                                            "                           sync\n" +
+                                            "                       )\n" +
+                                            "                       SELECT code_bon,\n" +
+                                            "                              date_bon,\n" +
+                                            "                              code_clt,\n" +
+                                            "                              nom_clt,\n" +
+                                            "                              code_emp,\n" +
+                                            "                              etat,\n" +
+                                            "                              sync\n" +
+                                            "                         FROM sqlitestudio_temp_table;");
+
+                                    Accueil.bd.write("DROP TABLE sqlitestudio_temp_table;");
+
+
+                                    /*------------------- Table 2 -------------------*/
+
+                                    Accueil.bd.write("CREATE TABLE sqlitestudio_temp_table AS SELECT *\n" +
+                                            "                                          FROM bon_transfert;\n");
+                                    Accueil.bd.write("DROP TABLE bon_transfert;");
+
+                                    Accueil.bd.write("CREATE TABLE bon_transfert (\n" +
+                                            "    id                 INTEGER       NOT NULL,\n" +
+                                            "    code_emp           VARCHAR (100),\n" +
+                                            "    codebar_depot_src  VARCHAR (100),\n" +
+                                            "    nom_depot_src      VARCHAR (100),\n" +
+                                            "    codebar_depot_dest VARCHAR (100),\n" +
+                                            "    nom_depot_dest     VARCHAR (100),\n" +
+                                            "    date_transfert     DATETIME,\n" +
+                                            "    sync               VARCHAR (2),\n" +
+                                            "    etat               VARCHAR (30),\n" +
+                                            "    PRIMARY KEY (\n" +
+                                            "        id\n" +
+                                            "    )\n" +
+                                            ");");
+
+                                    Accueil.bd.write("INSERT INTO bon_transfert (\n" +
+                                            "                              id,\n" +
+                                            "                              code_emp,\n" +
+                                            "                              codebar_depot_src,\n" +
+                                            "                              nom_depot_src,\n" +
+                                            "                              codebar_depot_dest,\n" +
+                                            "                              nom_depot_dest,\n" +
+                                            "                              date_transfert,\n" +
+                                            "                              sync,\n" +
+                                            "                              etat\n" +
+                                            "                          )\n" +
+                                            "                          SELECT id,\n" +
+                                            "                                 code_emp,\n" +
+                                            "                                 codebar_depot_src,\n" +
+                                            "                                 nom_depot_src,\n" +
+                                            "                                 codebar_depot_dest,\n" +
+                                            "                                 nom_depot_dest,\n" +
+                                            "                                 date_transfert,\n" +
+                                            "                                 sync,\n" +
+                                            "                                 etat\n" +
+                                            "                            FROM sqlitestudio_temp_table;");
+
+                                    Accueil.bd.write("DROP TABLE sqlitestudio_temp_table;");
+
+                                }catch (Exception e){
+                                    e.printStackTrace();
+
+                                }
+                            }break;
                         }
                         code++;
                     }
                     Accueil.bd.write("update admin set code_version='"+info.versionCode+"'  ");
-
             }
         }
 

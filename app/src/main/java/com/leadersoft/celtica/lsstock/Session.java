@@ -277,7 +277,9 @@ public class Session {
 
         Accueil.bd.write("update bon_inventaire set sync='1' ,etat='supprimé' where sync='0'");
 
-        Accueil.bd.write("update bon_transfert set sync='1' ,etat='supprimé' where sync='0'");
+        Accueil.bd.write("update bon_transfert set sync='1' ,etat='supprimé' where sync='0' and etat='validé'");
+
+        Accueil.bd.write("delete from bon_transfert   where codebar_depot_dest is null");
 
         Accueil.bd.write("delete from bon_preparation where sync='0'");
 

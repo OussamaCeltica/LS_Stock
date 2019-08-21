@@ -90,7 +90,14 @@ public class BonPreparation {
     }
 
     public void addToBD(){
-        Accueil.bd.write2("replace into bon_preparation (Oid,code_bon,date_bon,nom_clt,sync,valider) values(?,?,'"+date_bon+"',?,'0','0')", new MyBD.SqlPrepState() {
+        Accueil.bd.write2("delete from bon_preparation where code_bon=?", new MyBD.SqlPrepState() {
+            @Override
+            public void putValue(SQLiteStatement stmt) {
+                stmt.bindString(1,code_bon+"");
+                stmt.execute();
+            }
+        });
+        Accueil.bd.write2("insert into bon_preparation (Oid,code_bon,date_bon,nom_clt,sync,valider) values(?,?,'"+date_bon+"',?,'0','0')", new MyBD.SqlPrepState() {
             @Override
             public void putValue(SQLiteStatement stmt) {
                 try {

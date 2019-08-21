@@ -545,7 +545,7 @@ public class Synchronisation extends AppCompatActivity {
                                 "    INNER JOIN Warehouse\n" +
                                 "    ON Warehouse.Oid = DocumentItem.warehouse \n" +
                                 "\t inner join Company on Document.contact = Company.Oid\n" +
-                                "\t where matricule_employé='"+Login.session.employe.code_emp+"' and  not exists(select * from DocumentItem where GCRecord is null and document = [Document].Oid and quantity <> 0)", new SqlServerBD.doAfterBeforeGettingData() {
+                                "\t where matricule_employé='"+Login.session.employe.code_emp+"' and  not exists(select * from DocumentItem where GCRecord is null and document = [Document].Oid and quantity <> 0) order by code", new SqlServerBD.doAfterBeforeGettingData() {
                             @Override
                             public void echec(SQLException e) {
                                 e.printStackTrace();
@@ -713,7 +713,7 @@ public class Synchronisation extends AppCompatActivity {
                 while (r.moveToNext()){
 
                     Accueil.BDsql.beginTRansact();
-                    final BonTransfert bon=new BonTransfert(r.getString(r.getColumnIndex("id"))+"",r.getString(r.getColumnIndex("codebar_depot_src"))+"" ,r.getString(r.getColumnIndex("codebar_depot_dest"))+"",r.getDouble(r.getColumnIndex("date_f"))+"",r.getDouble(r.getColumnIndex("code_emp"))+"");
+                    final BonTransfert bon=new BonTransfert(r.getString(r.getColumnIndex("id"))+"",r.getString(r.getColumnIndex("codebar_depot_src"))+"" ,r.getString(r.getColumnIndex("codebar_depot_dest"))+"",r.getDouble(r.getColumnIndex("date_f"))+"",r.getDouble(r.getColumnIndex("code_emp"))+"",ETAT.VALIDÉ);
                     bon.exportéBon(recordTansf+"");
 
                     ArrayList<ProduitTransferé> produits=bon.getProduitInBon();

@@ -6,6 +6,7 @@ import android.util.Log;
 import android.widget.Toast;
 
 import com.leadersoft.celtica.lsstock.Accueil;
+import com.leadersoft.celtica.lsstock.ETAT;
 import com.leadersoft.celtica.lsstock.Login;
 import com.leadersoft.celtica.lsstock.MyBD;
 import com.leadersoft.celtica.lsstock.SqlServerBD;
@@ -21,26 +22,29 @@ import java.util.HashMap;
 
 public class BonTransfert {
     public String id_bon,codebar_dep_src,nom_dep_src,codebar_dep_dest,nom_dep_dest,date_trans,code_emp;
+    public ETAT etat;
 
     public BonTransfert(){
 
     }
 
-    public BonTransfert(String id_bon, String codebar_dep_src, String nom_dep_src, String codebar_dep_dest, String nom_dep_dest,String date_trans) {
+    public BonTransfert(String id_bon, String codebar_dep_src, String nom_dep_src, String codebar_dep_dest, String nom_dep_dest,String date_trans,ETAT e) {
         this.id_bon = id_bon;
         this.codebar_dep_src = codebar_dep_src;
         this.nom_dep_src = nom_dep_src;
         this.codebar_dep_dest = codebar_dep_dest;
         this.nom_dep_dest = nom_dep_dest;
         this.date_trans=date_trans;
+        etat=e;
     }
 
-    public BonTransfert(String id_bon, String codebar_dep_src, String codebar_dep_dest,String date_trans,String code_emp) {
+    public BonTransfert(String id_bon, String codebar_dep_src, String codebar_dep_dest,String date_trans,String code_emp,ETAT e) {
         this.id_bon = id_bon;
         this.codebar_dep_src = codebar_dep_src;
         this.codebar_dep_dest = codebar_dep_dest;
         this.code_emp=code_emp;
         this.date_trans=date_trans;
+        etat=e;
     }
 
     public void validerTranfert(final String codebar_dep_dest){

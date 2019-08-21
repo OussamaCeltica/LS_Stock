@@ -14,6 +14,7 @@ import android.widget.LinearLayout;
 import android.widget.PopupMenu;
 import android.widget.TextView;
 
+import com.leadersoft.celtica.lsstock.ETAT;
 import com.leadersoft.celtica.lsstock.R;
 
 import java.util.ArrayList;
@@ -39,55 +40,32 @@ public class BonsTransfertAdapter extends RecyclerView.Adapter<RecyclerView.View
         public TextView nom_bon;
         public TextView depotSrc;
         public TextView depotDest;
+        public LinearLayout transButt;
+        public LinearLayout divDepotDest;
         public LinearLayout body;
         public BonView(View v) {
             super(v);
             nom_bon=(TextView)v.findViewById(R.id.div_bonTransfert_bon);
             msg=(TextView)v.findViewById(R.id.div_bonTransfert_msg);
+            transButt=(LinearLayout) v.findViewById(R.id.div_bonTransfert_butt);
             depotSrc=(TextView)v.findViewById(R.id.div_bonTransfert_depotSrc);
             depotDest=(TextView)v.findViewById(R.id.div_bonTransfert_depotDest);
+            divDepotDest=(LinearLayout) v.findViewById(R.id.divBonTrans_divDepDest);
             body=(LinearLayout) v.findViewById(R.id.div_bonTransfert_body);
 
         }
     }
 
-    public static class BonViewSupp extends RecyclerView.ViewHolder  {
-        public TextView msg;
-        public TextView nom_bon;
-        public TextView depot;
-        public TextView depotDest;
-        public LinearLayout transButt;
-        public LinearLayout body;
-        public LinearLayout divDepotDest;
-        public BonViewSupp(View v) {
-            super(v);
-            nom_bon=(TextView)v.findViewById(R.id.div_bonTransfert_bon);
-            msg=(TextView)v.findViewById(R.id.div_bonTransfert_msg);
-            depot=(TextView)v.findViewById(R.id.div_bonTransfert_depot);
-            depotDest=(TextView)v.findViewById(R.id.div_bonTransfert_depotDest);
-            transButt=(LinearLayout) v.findViewById(R.id.div_bonTransfert_butt);
-            body=(LinearLayout) v.findViewById(R.id.div_bonTransfert_body);
-            divDepotDest=(LinearLayout) v.findViewById(R.id.div_bonTransfert_depotDestDiv);
 
-        }
-    }
 
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        switch (viewType){
-            case 2:{
-                View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.div_bon_transfert_supp,parent,false);
 
-                BonViewSupp vh = new BonViewSupp(v);
-                return vh;
-            }
-            default: {
-                View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.div_bon_transfert_exporte,parent,false);
+            View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.div_bon_transfert_exporte,parent,false);
 
-                BonView vh = new BonView(v);
-                return vh;
-            }
-        }
+            BonView vh = new BonView(v);
+            return vh;
+
 
     }
 
@@ -95,13 +73,17 @@ public class BonsTransfertAdapter extends RecyclerView.Adapter<RecyclerView.View
     @Override
     public void onBindViewHolder(final RecyclerView.ViewHolder holder, final int position) {
 
-        if(bons.get(position) instanceof BonTransfertEnCours){
-            ((BonViewSupp)holder).msg.setText("EN COURS");
-            ((BonViewSupp)holder).nom_bon.setText(""+bons.get(position).id_bon);
-            ((BonViewSupp)holder).depot.setText(""+bons.get(position).nom_dep_src);
+        ((BonView)holder).nom_bon.setText(""+bons.get(position).id_bon);
+        ((BonView)holder).depotSrc.setText(""+bons.get(position).nom_dep_src);
+
+        if(bons.get(position).etat == ETAT.EN_COURS){
+            ((BonView)holder).msg.setText(c.getResources().getString(R.string.etat_cours));
+            ((BonView)holder).msg.setBackgroundColor(c.getResources().getColor(R.color.Red));
+            ((BonView)holder).divDepotDest.setVisibility(View.GONE);
+            ((BonView)holder).transButt.setVisibility(View.VISIBLE);
 
             //region afficher produits ..
-            ((BonViewSupp)holder).body.setOnClickListener(new View.OnClickListener() {
+            ((BonView)holder).body.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     itemSelected=position;
@@ -114,11 +96,11 @@ public class BonsTransfertAdapter extends RecyclerView.Adapter<RecyclerView.View
             //endregion
 
             //region supprimer un bon en cours ..
-            ((BonViewSupp)holder).body.setOnLongClickListener(new View.OnLongClickListener() {
+            ((BonView)holder).body.setOnLongClickListener(new View.OnLongClickListener() {
                 @Override
                 public boolean onLongClick(View view) {
 
-                    PopupMenu popup = new PopupMenu(c,((BonViewSupp)holder).nom_bon);
+                    PopupMenu popup = new PopupMenu(c,((BonView)holder).nom_bon);
 
                     //popup.getMenu().add("Archive Préparation");
                     popup.getMenu().add("Supprimer");
@@ -145,7 +127,7 @@ public class BonsTransfertAdapter extends RecyclerView.Adapter<RecyclerView.View
             //endregion
 
             //region valider le bon ..
-            ((BonViewSupp)holder).transButt.setOnClickListener(new View.OnClickListener() {
+            ((BonView)holder).transButt.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     itemSelected=position;
@@ -156,12 +138,10 @@ public class BonsTransfertAdapter extends RecyclerView.Adapter<RecyclerView.View
             });
             //endregion
 
-        }else if (bons.get(position) instanceof BonTransfertExporte){
-
-            ((BonView)holder).nom_bon.setText(""+bons.get(position).id_bon);
-            ((BonView)holder).depotSrc.setText(""+bons.get(position).nom_dep_src);
+        }else {
+            ((BonView)holder).msg.setBackgroundColor(c.getResources().getColor(R.color.Green));
+            ((BonView)holder).divDepotDest.setVisibility(View.VISIBLE);
             ((BonView)holder).depotDest.setText(""+bons.get(position).nom_dep_dest);
-
             ((BonView)holder).body.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -172,39 +152,21 @@ public class BonsTransfertAdapter extends RecyclerView.Adapter<RecyclerView.View
                     c.startActivity(i);
                 }
             });
-        }else {
-            ((BonView)holder).msg.setVisibility(View.GONE);
 
-            ((BonView)holder).nom_bon.setText(""+bons.get(position).id_bon);
-            ((BonView)holder).depotSrc.setText(""+bons.get(position).nom_dep_src);
-            ((BonView)holder).depotDest.setText(""+bons.get(position).nom_dep_dest);
-
-            ((BonView)holder).body.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    itemSelected=position;
-                    PanierAdapter.produits=bons.get(position).getProduitInBon();
-                    Intent i=new Intent(c,FaireTransfert.class);
-                    i.putExtra("request","bon_validé");
-                    c.startActivity(i);
-                }
-            });
+            if (bons.get(position).etat == ETAT.EXPORTÉ){
+                ((BonView)holder).msg.setText(c.getResources().getString(R.string.etat_exporté));
+            }else {
+                ((BonView)holder).msg.setText(c.getResources().getString(R.string.etat_validé));
+            }
         }
+
+
 
 
 
     }
 
-    @Override
-    public int getItemViewType(int position) {
-        if(bons.get(position) instanceof BonTransfertEnCours){
-            return 2;
-        }else if (bons.get(position) instanceof BonTransfertExporte){
-            return 1;
-        }else {
-            return 1;
-        }
-    }
+
 
     @Override
     public int getItemCount() {

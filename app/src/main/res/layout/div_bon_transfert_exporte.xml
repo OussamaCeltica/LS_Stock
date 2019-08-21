@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="7dp"
-        android:paddingBottom="10dp"
+        android:paddingBottom="15dp"
         android:background="@color/AppColor"
         android:orientation="vertical">
 
@@ -91,6 +91,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/divBonTrans_divDepDest"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -153,7 +154,31 @@
                 android:textSize="18sp" />
         </LinearLayout>
 
+        <LinearLayout
+            android:id="@+id/div_bonTransfert_butt"
+            android:layout_width="165dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:background="@drawable/butt_back_degrade"
+            android:gravity="center"
+            >
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/validate_black"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:fontFamily="@font/cairo_semibold"
+                android:textColor="@color/Black"
+                android:text="@string/div_transfert_faire"/>
 
+
+        </LinearLayout>
 
     </LinearLayout>
 

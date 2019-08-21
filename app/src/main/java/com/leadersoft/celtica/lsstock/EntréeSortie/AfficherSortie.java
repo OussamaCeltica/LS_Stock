@@ -71,11 +71,16 @@ public class AfficherSortie extends AppCompatActivity {
             mAdapter = new BonSortieAdapter(AfficherSortie.this);
 
             mRecyclerView.setAdapter(mAdapter);
+            //endregion
 
+            //region mode normal ..
             if (getIntent().getExtras() == null){
                 sync=0;
+            }
+            //endregion
 
-            }else {
+            //region mode archive ..
+            else {
                 sync=1;
                 //region menu des archives
                 ((ImageView) findViewById(R.id.affSortie_addPrep)).setVisibility(View.GONE);
@@ -84,9 +89,6 @@ public class AfficherSortie extends AppCompatActivity {
                 //endregion
 
             }
-            r=Accueil.bd.read("select * from bon_sortie where sync='"+sync+"' "+(Login.session.mode.equals("admin")== true ? "" : (sync == 1 ? "" : "and code_emp='"+Login.session.employe.code_emp+"'"))+" order by code_bon desc");
-
-            afficherBons(r);
             //endregion
 
             //region la recherche ..
@@ -98,11 +100,7 @@ public class AfficherSortie extends AppCompatActivity {
 
                 @Override
                 public void onTextChanged(CharSequence s, int start, int before, int count) {
-                    if (s.toString().equals("")){
-                        r=Accueil.bd.read("select * from bon_sortie where sync='"+sync+"' "+(Login.session.mode.equals("admin")== true ? "" : (sync == 1 ? "" : "and code_emp='"+Login.session.employe.code_emp+"'"))+" order by code_bon desc");
-                    }else {
-                        r=Accueil.bd.read2("select * from bon_sortie where sync='"+sync+"' "+(Login.session.mode.equals("admin")== true ? "" : (sync == 1 ? "" : "and code_emp='"+Login.session.employe.code_emp+"'"))+" and (code_bon LIKE ? or nom_clt LIKE ?)  order by code_bon desc",new String[]{"%"+s.toString()+"%","%"+s.toString()+"%"});
-                    }
+                    r=Accueil.bd.read2("select * from bon_sortie where (sync='"+sync+"' "+(Login.session.mode.equals("admin")== true ? ")" : (sync == 1 ? ")" : "or ( sync='1' and  julianday('now') - julianday(date_bon)<= 2)) and code_emp='"+Login.session.employe.code_emp+"' "))+" and (code_bon LIKE ? or nom_clt LIKE ?)  order by code_bon desc",new String[]{"%"+s.toString()+"%","%"+s.toString()+"%"});
 
                     afficherBons(r);
 
@@ -148,6 +146,10 @@ public class AfficherSortie extends AppCompatActivity {
                 }
             });
             //endregion
+
+            r=Accueil.bd.read("select * from bon_sortie where (sync='"+sync+"' "+(Login.session.mode.equals("admin")== true ? ")" : (sync == 1 ? ")" : "or ( sync='1' and  julianday('now') - julianday(date_bon)<= 2)) and code_emp='"+Login.session.employe.code_emp+"'"))+" order by code_bon desc");
+
+            afficherBons(r);
 
 
         }

@@ -45,8 +45,8 @@ public class ProduitDansBon extends Produit {
            Accueil.bd.write2("insert into produit_preparer(code_bon,codebar_pr,nom_pr,codebar_depot,nom_depot,codebar_lot,final_qt,current_qt) values('"+code_bon+"','"+codebar+"',?,'"+codebar_dep+"',?,'','0','"+current_qt+"')", new MyBD.SqlPrepState() {
                @Override
                public void putValue(SQLiteStatement stmt) {
-                   stmt.bindString(1,nom);
-                   stmt.bindString(2,nom_dep);
+                   stmt.bindString(1,nom+"");
+                   stmt.bindString(2,nom_dep+"");
                    stmt.execute();
                }
            });
@@ -60,7 +60,7 @@ public class ProduitDansBon extends Produit {
     }
 
     public void addToBD(final String code_bon){
-        Accueil.bd.write2("replace into produit_preparer (code_bon,codebar_pr,nom_pr,codebar_depot,nom_depot,codebar_lot,final_qt,current_qt) values(?,'"+codebar+"',?,'"+codebar_dep+"',?,'','"+final_qt+"','0')", new MyBD.SqlPrepState() {
+        Accueil.bd.write2("insert into produit_preparer (code_bon,codebar_pr,nom_pr,codebar_depot,nom_depot,codebar_lot,final_qt,current_qt) values(?,'"+codebar+"',?,'"+codebar_dep+"',?,'','"+final_qt+"','0')", new MyBD.SqlPrepState() {
             @Override
             public void putValue(SQLiteStatement stmt) {
 

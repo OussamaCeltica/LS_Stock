@@ -4,6 +4,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteStatement;
 
 import com.leadersoft.celtica.lsstock.Accueil;
+import com.leadersoft.celtica.lsstock.ETAT;
 import com.leadersoft.celtica.lsstock.Login;
 import com.leadersoft.celtica.lsstock.MyBD;
 
@@ -17,8 +18,10 @@ public class BonTransfertEnCours extends BonTransfert {
         this.id_bon = id_bon;
         this.codebar_dep_src = codebar_dep_src;
         this.nom_dep_src=nom_dep_src;
+        this.etat= ETAT.EN_COURS;
     }
     public BonTransfertEnCours(String codebar_dep_src){
+        this.etat= ETAT.EN_COURS;
         this.codebar_dep_src=codebar_dep_src;
         int id=1;
         Cursor r= Accueil.bd.read("select id_transfert from bon_last_id  order by id_transfert desc limit 1");
@@ -29,6 +32,7 @@ public class BonTransfertEnCours extends BonTransfert {
     }
 
     public BonTransfertEnCours(String id_bon,String depot_src){
+        this.etat= ETAT.EN_COURS;
         this.id_bon=id_bon;
     }
 

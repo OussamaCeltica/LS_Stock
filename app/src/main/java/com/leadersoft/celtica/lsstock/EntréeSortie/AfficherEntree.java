@@ -81,7 +81,7 @@ public class AfficherEntree extends AppCompatActivity {
 
             }
 
-            r=Accueil.bd.read("select * from bon_entree where sync='"+sync+"' "+(Login.session.mode.equals("admin")== true ? "" : (sync == 1 ? "" : "and code_emp='"+Login.session.employe.code_emp+"'"))+" order by code_bon desc");
+            r=Accueil.bd.read("select * from bon_entree where (sync='"+sync+"' "+(Login.session.mode.equals("admin")== true ? ")" : (sync == 1 ? ")" : "or ( sync='1' and  julianday('now') - julianday(date_bon)<= 2)) and code_emp='"+Login.session.employe.code_emp+"'"))+" order by code_bon desc");
 
             afficherBons(r);
             //endregion
@@ -96,12 +96,7 @@ public class AfficherEntree extends AppCompatActivity {
                 @Override
                 public void onTextChanged(CharSequence s, int start, int before, int count) {
 
-                    if (s.toString().equals("")){
-                        r=Accueil.bd.read("select * from bon_entree where sync='"+sync+"' "+(Login.session.mode.equals("admin")== true ? "" : (sync == 1 ? "" : "and code_emp='"+Login.session.employe.code_emp+"'"))+" order by code_bon desc");
-                    }else {
-                        r=Accueil.bd.read2("select * from bon_entree where sync='"+sync+"' "+(Login.session.mode.equals("admin")== true ? "" : (sync == 1 ? "" : "and code_emp='"+Login.session.employe.code_emp+"'"))+" and (code_bon LIKE ? or nom_fournis LIKE ?)  order by code_bon desc",new String[]{"%"+s.toString()+"%","%"+s.toString()+"%"});
-                        Log.e("sss","select * from bon_entree where sync='"+sync+"' "+(Login.session.mode.equals("admin")== true ? "" : (sync == 1 ? "" : "and code_emp='"+Login.session.employe.code_emp+"'"))+" and (code_bon LIKE ? or nom_fournis LIKE ?)  order by code_bon desc");
-                    }
+                    r=Accueil.bd.read2("select * from bon_entree where (sync='"+sync+"' "+(Login.session.mode.equals("admin")== true ? ")" : (sync == 1 ? ")" : "or ( sync='1' and  julianday('now') - julianday(date_bon)<= 2)) and code_emp='"+Login.session.employe.code_emp+"' "))+" and (code_bon LIKE ? or nom_fournis LIKE ?)  order by code_bon desc",new String[]{"%"+s.toString()+"%","%"+s.toString()+"%"});
 
                     afficherBons(r);
 
